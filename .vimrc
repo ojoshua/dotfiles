@@ -1,3 +1,4 @@
+set nocp
 syntax enable
 
 set autoindent
@@ -6,6 +7,10 @@ filetype plugin indent on
 set number
 set showcmd
 set ruler
+
+" Encoding settings
+set encoding=utf-8
+set fileencoding=utf-8
 
 colorscheme desert
 
@@ -19,6 +24,11 @@ if has('gui_running')
   set guioptions-=m
   set guioptions-=T
 endif
+
+" Netrw file explorer
+let g:netrw_banner=0
+let g:netrw_liststyle=3 " Tree
+let g:netrw_bufsettings='noma nomod nu nobl nowrap ro'
 
 " Faster window navigation
 nnoremap <C-J> <C-W><C-J>
